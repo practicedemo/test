@@ -10,9 +10,12 @@ int main()
 	printf("请输入票面\n");
 	scanf("%d",&bill);
 	//计算找零
-	if(price>=bill)
+	if(bill>=price)
 	{
 		printf("找您：%d\n",bill-price);
+	}else
+	{
+		printf("你的钱不够\n");
 	}
 	return 0;
 }
