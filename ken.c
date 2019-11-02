@@ -1,21 +1,30 @@
 #include<stdio.h>
 int main()
 {
-	//初始化
-	int price = 0;
-	int bill = 0;
-	//输入票面及金额
-	printf("请输入金额\n");
-	scanf("%d",&price);
-	printf("请输入票面\n");
-	scanf("%d",&bill);
-	//计算找零
-	if(bill>=price)
+	int x,y;
+	int ret = 0;
+	int i;
+	int ispRrime=1;
+	int last;
+
+	for(x=2;x<=200;x++)
 	{
-		printf("找您：%d\n",bill-price);
-	}else
-	{
-		printf("你的钱不够\n");
+		for(y=2；y<=200;y++)
+		{
+			if(x%y==0)
+			{
+				isPrime = 0;
+				break;
+			}
+		}
 	}
+	if(isPrime == 1)
+	{
+		ret += x;
+		last++;
+		if(last == y-x)
+				(break;)
+	}
+	printf("%d",ret);
 	return 0;
 }
