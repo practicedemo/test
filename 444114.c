@@ -2,14 +2,14 @@
 int main()
 {
 	int x;
+	int digit;
 	scanf("%d",&x);
-	int count =0;
-	count++;
-	while(x/10>0)
+	while(x!=0)
 	{
+		digit = x%10;
+		printf("%d",digit);
 		x/=10;
-		count++;
 	}
-	printf("%d\n",count);
+	printf("\n");
 	return 0;
 }
