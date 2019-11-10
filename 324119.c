@@ -2,13 +2,13 @@
 int main()
 {
 	int x;
-	double sum = 0.0;
-	int i;
 	scanf("%d",&x);
+	int i;
+	int sum = 1;
 	for(i=1;i<=x;i++)
 	{
-		sum += 1.0/i;
+		sum *=i;
 	}
-	printf("%f\n",sum);
+	printf("%d\n",sum);
 	return 0;
 }

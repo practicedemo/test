@@ -2,28 +2,14 @@
 int main()
 {
 	int a,b;
+	int t;
 	scanf("%d %d",&a,&b);
-	int min;
-	int i,ret;
-
-	if(a>b)
+	while(b != 0)
 	{
-		min = b;
-	}else
-	{
-		min = a;
+		t = a % b;
+		a = b;
+		b = t;
 	}
-	for(i=1;i<min;i++)
-	{
-		if(a%i==0)
-		{
-			if(b%i==0)
-			{
-				ret = i;
-			}
-		}
-	}
-	
-	printf("gcd = %d\n",ret);
+	printf("gcd=%d\n",a);
 	return 0;
 }
