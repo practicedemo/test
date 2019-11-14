@@ -1,14 +1,12 @@
 #include<stdio.h>
 int main(){
 	int x;
-	int cnt=1;
-	
+	int cnt = 0;
 	scanf("%d",&x);
-	while(x>9)
-	{
-		x /= 10;
+	while(x>1){
+		x/=2;
 		cnt++;
 	}
-	printf("%d\n",cnt);
+	printf(" log2 = %d",cnt);
 	return 0;
 }
