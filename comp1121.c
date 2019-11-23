@@ -1,7 +1,7 @@
 #include<stdio.h>
 int max(int a[],int len){
-	for(int i=1;i<len;i++){
 		int maxid = 0;
+	for(int i=1;i<len;i++){
 		if(a[i]>a[maxid]){
 			maxid = i;
 		}
