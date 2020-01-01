@@ -1,15 +1,30 @@
 #include<stdio.h>
-int main(){
-	int x;
-	scanf("%d",&x);
-	int sign = -1;
-	int i;
-	int sum = 0;
-	int d =1;
-	for(i=1;i<=x;i+=3){
-		sum +=1/(i*sign);
-		printf("%d %d\n",i,sum);
-		sign = -sign;
+int isPrime(int i){
+	int ret = 1;
+	int k;
+	for(k = 2; k < i-1; k++){
+		if( i%k == 0 ){
+			ret = 0;
+			break;
+		}
 	}
-	//printf("%d\n",sum);
+	return ret;
+}
+int main(){
+	int m,n;
+	int sum = 0;
+	int cnt = 0;
+	int i;
+
+	scanf("%d %d",&m,&n);
+	if(m == 1) m = 2;
+	for(i = m;i<=n;i++){
+		if(isPrime(i)){
+			sum += i;
+			cnt++;
+		}
+	}
+	printf("cnt=%d sum=%d\n",cnt,sum);
+
+	return 0;
 }
